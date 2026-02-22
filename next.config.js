@@ -8,6 +8,26 @@ const nextConfig = {
       },
     ],
   },
+  headers: async () => [
+    {
+      // 全ページ対象：Vercel CDNキャッシュを無効化
+      source: '/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        },
+        {
+          key: 'CDN-Cache-Control',
+          value: 'no-store',
+        },
+        {
+          key: 'Vercel-CDN-Cache-Control',
+          value: 'no-store',
+        },
+      ],
+    },
+  ],
 };
 
 module.exports = nextConfig;
