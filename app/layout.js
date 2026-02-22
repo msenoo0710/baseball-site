@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: '気仙沼シーホークス少年野球クラブ | KESENNUMA SEAHAWKS',
-  description: '気仙沼シーホークス少年野球クラブの公式サイトです。活動報告やメンバー紹介をお届けします。',
+  title: '〇〇少年野球クラブ | YOUR TEAM',
+  description: '〇〇少年野球クラブの公式サイトです。活動報告やメンバー紹介をお届けします。',
 };
 
 export default function RootLayout({ children }) {

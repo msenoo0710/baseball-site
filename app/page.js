@@ -47,8 +47,8 @@ export default function HomePage() {
           <span style={{ fontSize: '12px', opacity: 0.6 }}>チーム集合写真</span>
         </div>
 
-        <div className="fade-up-2" style={{ display: 'inline-block', background: '#FFD600', color: '#0052D4', fontFamily: "'Bebas Neue', sans-serif", fontSize: '14px', letterSpacing: '6px', padding: '4px 20px', borderRadius: '4px', marginBottom: '12px', boxShadow: '0 4px 16px rgba(255,214,0,0.3)' }}>KESENNUMA SEAHAWKS</div>
-        <h1 className="fade-up-2" style={{ fontSize: '34px', fontWeight: 900, color: '#fff', textAlign: 'center', margin: '0 0 16px 0', lineHeight: 1.3, textShadow: '0 4px 24px rgba(0,0,0,0.2)' }}>気仙沼シーホークス<br />少年野球クラブ</h1>
+        <div className="fade-up-2" style={{ display: 'inline-block', background: '#FFD600', color: '#0052D4', fontFamily: "'Bebas Neue', sans-serif", fontSize: '14px', letterSpacing: '6px', padding: '4px 20px', borderRadius: '4px', marginBottom: '12px', boxShadow: '0 4px 16px rgba(255,214,0,0.3)' }}>YOUR TEAM</div>
+        <h1 className="fade-up-2" style={{ fontSize: '34px', fontWeight: 900, color: '#fff', textAlign: 'center', margin: '0 0 16px 0', lineHeight: 1.3, textShadow: '0 4px 24px rgba(0,0,0,0.2)' }}>〇〇<br />少年野球クラブ</h1>
         <p className="fade-up-3" style={{ fontSize: '15px', color: 'rgba(255,255,255,0.9)', textAlign: 'center', fontWeight: 700, margin: 0 }}>「楽しく、真剣に、仲間とともに」</p>
         <p className="fade-up-3" style={{ fontSize: '13px', color: 'rgba(255,255,255,0.65)', textAlign: 'center', margin: '8px 0 0 0' }}>野球を通じて子どもたちの成長を応援します</p>
         <div className="fade-up-4" style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', opacity: 0.5 }}>
@@ -62,7 +62,7 @@ export default function HomePage() {
         <div style={{ maxWidth: '600px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
           {[
             { icon: '🕐', label: '活動日時', value: '毎週 土・日\n9:00〜12:00', accent: '#0066FF' },
-            { icon: '📍', label: '活動場所', value: '気仙沼市立○○小\nグラウンド', accent: '#00C853' },
+            { icon: '📍', label: '活動場所', value: '〇〇市立○○小\nグラウンド', accent: '#00C853' },
             { icon: '👦', label: '対象', value: '小学\n1年生〜6年生', accent: '#FF9100' },
             { icon: '📞', label: '連絡先', value: '090-XXXX-XXXX\n代表 山田', accent: '#FF1744' },
           ].map((item, i) => (
@@ -86,7 +86,7 @@ export default function HomePage() {
         </div>
         <div style={{ background: '#fff', borderRadius: '16px', padding: '24px', boxShadow: '0 4px 16px rgba(0,0,0,0.05)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, right: 0, width: '80px', height: '80px', background: 'linear-gradient(135deg, #0066FF11, #00E5FF22)', borderRadius: '0 16px 0 80px' }} />
-          <p style={{ fontSize: '14px', color: '#444', lineHeight: 2.1, margin: '0 0 14px 0' }}>気仙沼シーホークス少年野球クラブは、2015年に設立された少年野球チームです。「楽しく、真剣に、仲間とともに」をモットーに、野球の技術だけでなく、礼儀やチームワークの大切さを学んでいます。</p>
+          <p style={{ fontSize: '14px', color: '#444', lineHeight: 2.1, margin: '0 0 14px 0' }}>〇〇少年野球クラブは、2015年に設立された少年野球チームです。「楽しく、真剣に、仲間とともに」をモットーに、野球の技術だけでなく、礼儀やチームワークの大切さを学んでいます。</p>
           <p style={{ fontSize: '14px', color: '#444', lineHeight: 2.1, margin: 0 }}>現在、小学1年生から6年生まで約25名の選手が在籍。毎週末の練習と月2〜3回の試合・交流戦に参加しています。体験入団は随時受付中です。お気軽にお問い合わせください。</p>
         </div>
       </section>

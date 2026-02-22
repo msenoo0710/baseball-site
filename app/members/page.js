@@ -174,7 +174,7 @@ export default function MembersPage() {
             </div>
             <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#fff', margin: '0 0 8px 0', lineHeight: 1.4 }}>一緒に野球しよう！</h3>
             <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, margin: '0 0 20px 0' }}>
-              気仙沼シーホークスでは新しい仲間を募集しています。<br />
+              〇〇では新しい仲間を募集しています。<br />
               小学1〜6年生ならだれでも大歓迎！<br />
               体験入団は随時受付中です。
             </p>

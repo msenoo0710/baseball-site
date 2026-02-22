@@ -38,13 +38,13 @@ export default function Footer() {
             marginBottom: '2px',
           }}
         >
-          KESENNUMA SEAHAWKS
+          YOUR TEAM
         </div>
         <div style={{ fontSize: '14px', color: '#fff', fontWeight: 900, marginBottom: '20px' }}>
-          気仙沼シーホークス少年野球クラブ
+          〇〇少年野球クラブ
         </div>
         <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)', lineHeight: 2 }}>
-          活動場所：気仙沼市立○○小学校グラウンド
+          活動場所：〇〇市立○○小学校グラウンド
           <br />
           活動日時：毎週 土・日 9:00〜12:00
           <br />
@@ -59,7 +59,7 @@ export default function Footer() {
             letterSpacing: '3px',
           }}
         >
-          © 2025 KESENNUMA SEAHAWKS BASEBALL CLUB
+          © 2025 YOUR TEAM BASEBALL CLUB
         </div>
       </div>
     </footer>

@@ -67,10 +67,10 @@ export default function Header({ current = '' }) {
                 whiteSpace: 'nowrap',
               }}
             >
-              KESENNUMA SEAHAWKS
+              YOUR TEAM
             </div>
             <div style={{ fontSize: '11px', color: '#fff', fontWeight: 900, marginTop: '-1px', whiteSpace: 'nowrap' }}>
-              気仙沼シーホークス少年野球クラブ
+              〇〇少年野球クラブ
             </div>
           </div>
         </Link>
@@ -184,11 +184,11 @@ export default function Header({ current = '' }) {
               <BaseballIcon size={16} />
             </div>
             <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '10px', color: '#FFD600', letterSpacing: '2px' }}>
-              KESENNUMA SEAHAWKS
+              YOUR TEAM
             </div>
           </div>
           <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.4)', lineHeight: 1.8 }}>
-            気仙沼市立○○小学校グラウンド<br />
+            〇〇市立○○小学校グラウンド<br />
             毎週 土・日 9:00〜12:00
           </div>
         </div>
