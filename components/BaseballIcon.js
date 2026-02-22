@@ -1,6 +1,6 @@
 export default function BaseballIcon({ size = 48 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64">
+    <svg width={size} height={size} viewBox="0 0 64 64" style={{ display: 'block', flexShrink: 0, width: size, height: size }}>
       <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" strokeWidth="2.5" />
       <path d="M20 8 Q24 20 20 32 Q16 44 20 56" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       <path d="M44 8 Q40 20 44 32 Q48 44 44 56" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />

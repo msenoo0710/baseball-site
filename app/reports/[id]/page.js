@@ -1,11 +1,76 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { categoryStyle, formatDate } from '@/lib/styles';
 import { reportDetail, reports } from '@/lib/data';
+
+/* ===== Lightbox (Portal) ===== */
+function Lightbox({ caption, color, onClose }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, []);
+
+  return createPortal(
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        background: 'rgba(0,0,0,0.88)',
+        zIndex: 9999,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+        cursor: 'pointer',
+        animation: 'fadeIn 0.2s ease',
+      }}
+    >
+      {/* 閉じるボタン */}
+      <div style={{
+        position: 'absolute',
+        top: '16px',
+        right: '16px',
+        width: '40px',
+        height: '40px',
+        borderRadius: '50%',
+        background: 'rgba(255,255,255,0.15)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backdropFilter: 'blur(4px)',
+      }}>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+      </div>
+
+      <div style={{
+        width: '100%',
+        maxWidth: '560px',
+        height: '55vh',
+        maxHeight: '400px',
+        background: `linear-gradient(135deg, ${color}20, ${color}40)`,
+        borderRadius: '12px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1" opacity="0.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" /></svg>
+      </div>
+      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', marginTop: '12px', textAlign: 'center' }}>{caption}</p>
+      <div style={{ color: 'rgba(255,255,255,0.3)', fontSize: '10px', marginTop: '8px' }}>タップで閉じる</div>
+    </div>,
+    document.body
+  );
+}
 
 /* ===== Image Placeholder with Lightbox ===== */
 function ImagePlaceholder({ caption, index }) {
@@ -34,15 +99,7 @@ function ImagePlaceholder({ caption, index }) {
         </figcaption>
       </figure>
 
-      {expanded && (
-        <div onClick={() => setExpanded(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', zIndex: 1000, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px', cursor: 'pointer', animation: 'fadeIn 0.2s ease' }}>
-          <div style={{ width: '100%', maxWidth: '560px', height: '320px', background: `linear-gradient(135deg, ${c}20, ${c}40)`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke={c} strokeWidth="1" opacity="0.5"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" /></svg>
-          </div>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', marginTop: '12px', textAlign: 'center' }}>{caption}</p>
-          <div style={{ color: 'rgba(255,255,255,0.3)', fontSize: '10px', marginTop: '8px' }}>タップで閉じる</div>
-        </div>
-      )}
+      {expanded && <Lightbox caption={caption} color={c} onClose={() => setExpanded(false)} />}
     </>
   );
 }
