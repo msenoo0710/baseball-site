@@ -47,7 +47,7 @@ export default async function MembersPage() {
     return <MembersContent
       players={[]}
       coaches={[]}
-      team={{ teamName: '', teamLabel: '', motto: '', subtitle: '', introduction: '', schedule: '', location: '', target: '', contactInfo: '', mainVisual: null }}
+      team={{ teamName: '', teamLabel: '', motto: '', subtitle: '', introduction: '', schedule: '', location: '', target: '', contactInfo: '', mainVisual: null, recruitTitle: '', recruitMessage: '' }}
     />;
   }
 }
