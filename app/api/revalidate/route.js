@@ -68,6 +68,11 @@ export async function POST(request) {
       revalidated.push(CACHE_TAGS.members);
       break;
 
+    case 'site-settings':
+      revalidateTag(CACHE_TAGS.siteSettings);
+      revalidated.push(CACHE_TAGS.siteSettings);
+      break;
+
     default:
       // 未知のAPIの場合は全タグを再検証
       Object.values(CACHE_TAGS).forEach((tag) => {

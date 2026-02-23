@@ -1,8 +1,9 @@
 import './globals.css';
 
-export const metadata = {
-  title: '〇〇少年野球クラブ | YOUR TEAM',
-  description: '〇〇少年野球クラブの公式サイトです。活動報告やメンバー紹介をお届けします。',
+// 各ページのgenerateMetadataで個別設定するため、ここではビューポートのみ
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {

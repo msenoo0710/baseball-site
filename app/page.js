@@ -1,8 +1,39 @@
-import { getLatestReports, getTeamInfo, getMembersAndCoaches } from '@/lib/microcms';
+import { getLatestReports, getTeamInfo, getMembersAndCoaches, getPageSeo } from '@/lib/microcms';
 import HomeContent from '@/components/HomeContent';
 
-// Webhookで即時更新 + 安全策として60秒でも再検証
 export const revalidate = 60;
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+
+export async function generateMetadata() {
+  const [seo, team] = await Promise.all([
+    getPageSeo('home'),
+    getTeamInfo(),
+  ]);
+
+  const title = seo?.pageTitle || team.teamName || '少年野球クラブ';
+  const description = seo?.pageDescription || `${team.teamName}の公式サイトです。`;
+  const ogImage = seo?.ogImage || team.mainVisual;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: SITE_URL,
+      siteName: team.teamName || title,
+      type: 'website',
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630 }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
+    },
+  };
+}
 
 export default async function HomePage() {
   try {
