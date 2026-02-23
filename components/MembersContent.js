@@ -164,7 +164,7 @@ export default function MembersContent({ players, coaches, team }) {
             <div style={{ display: 'inline-flex', background: '#FFD600', borderRadius: '50%', width: '52px', height: '52px', alignItems: 'center', justifyContent: 'center', color: '#0052D4', marginBottom: '16px', boxShadow: '0 4px 16px rgba(255,214,0,0.4)' }}>
               <BaseballIcon size={30} />
             </div>
-           {team.recruitTitle && <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#fff', margin: '0 0 8px 0', lineHeight: 1.4 }}>{team.recruitTitle}</h3>}
+            {team.recruitTitle && <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#fff', margin: '0 0 8px 0', lineHeight: 1.4 }}>{team.recruitTitle}</h3>}
             {team.recruitMessage && (
               <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, margin: '0 0 20px 0', whiteSpace: 'pre-line' }}>
                 {team.recruitMessage}
