@@ -1,7 +1,8 @@
 import { getLatestReports, getTeamInfo, getMembersAndCoaches } from '@/lib/microcms';
 import HomeContent from '@/components/HomeContent';
 
-export const dynamic = 'force-dynamic';
+// Webhookで即時更新 + 安全策として60秒でも再検証
+export const revalidate = 60;
 
 export default async function HomePage() {
   try {

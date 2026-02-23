@@ -1,7 +1,7 @@
 import { getReports } from '@/lib/microcms';
 import ReportsContent from '@/components/ReportsContent';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function ReportsArchive() {
   try {

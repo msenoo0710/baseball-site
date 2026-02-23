@@ -1,7 +1,7 @@
 import { getMembersAndCoaches, getTeamInfo } from '@/lib/microcms';
 import MembersContent from '@/components/MembersContent';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function MembersPage() {
   try {

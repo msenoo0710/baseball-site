@@ -2,7 +2,7 @@ import { getReportById, getReports } from '@/lib/microcms';
 import ReportDetailContent from '@/components/ReportDetailContent';
 import { notFound } from 'next/navigation';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function ReportDetailPage({ params }) {
   const { id } = await params;
